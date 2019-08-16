@@ -1,6 +1,11 @@
 class Song < ActiveRecord::Base
   belongs_to :artist
   belongs_to :genre
+  
+  def initialize(title, artist)
+    self.title = title
+    self.artist = artist
+  end
 
   def get_genre_name
     self.genre.name
