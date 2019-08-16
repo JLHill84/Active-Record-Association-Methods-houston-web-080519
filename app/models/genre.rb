@@ -19,6 +19,6 @@ class Genre < ActiveRecord::Base
     #   @names << artist.name
     # end
     # return @names
-    return self.artists.names
+    return self.artists.map { | artist | artist.name }
   end
 end
