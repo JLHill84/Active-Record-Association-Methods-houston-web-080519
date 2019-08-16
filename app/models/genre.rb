@@ -21,4 +21,5 @@ class Genre < ActiveRecord::Base
     # return @names
     return self.artists.map { | artist | artist.name }
   end
+  
 end
